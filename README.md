@@ -67,3 +67,8 @@ Environment settings can be manipulated as well, in either a transient fashion o
 [BREnvironment saveEnvironmentValue:@"bam" forKey:@"bar"];
 ```
 
+
+Example App
+-----------
+
+The project includes a mind-numbingly simple app in the **Environmental** directory. The app loads up a `BREnvironment` and shows all values in a table. There is an example `LocalEnvironment-sample.plist` file that, if you copy to `LocalEnvironment.plist` and re-run the app, will override the default settings.
