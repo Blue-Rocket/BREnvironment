@@ -9,6 +9,7 @@ Here the **Environment.plist** file can be checked into your project's source co
 
 Oh, and one more thing: `NSUserDefault` values are loaded into `BREnvironment` as well, so a single API can be used for a variety of use cases.
 
+
 Setup in 3 easy steps
 ---------------------
 
@@ -16,15 +17,20 @@ First, add `BREnvironment.h` and `BREnvironment.m` to your project, by any means
 
 Second, add an `Environment.plist` file to your project. This file *should* be part of your app's build target(s).
 
-Third, create a `LocalEnvironment.plist` file, at the root of your project. This is an *optional* file, so we can't add it directly to any build target(s). Instead, add a **Run Script** build step to your app's build phases that copies the file if it exists, for example:
+Third, create a `LocalEnvironment.plist` file, at the root of your project. Add this to your SCM's **ignore** list so it is **not** added to version control. This is an *optional* file, so we can't add it directly to any build target(s). Instead, add a **Run Script** build step to your app's build phases that copies the file if it exists, for example:
 
-	filePath=${PROJECT_DIR}/LocalEnvironment.plist
-	if [ -e "$filePath" ]; then
-		cp "$filePath" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/"
-		echo $filePath copied to ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}
-	else
-		echo $filePath not found.
-	fi
+```sh
+filePath=${PROJECT_DIR}/LocalEnvironment.plist
+if [ -e "$filePath" ]; then
+	cp "$filePath" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/"
+	echo $filePath copied to ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}
+else
+	echo $filePath not found.
+fi
+```
+
+Forth, ah ha! Just seeing if you actually read this far. There *are* only 3 easy steps!
+
 
 Querying Settings
 -----------------
@@ -43,6 +49,7 @@ NSString *foo = [BREnvironment sharedEnvironment][@"bar"];
 // get the whole she-bang environment
 NSDictionary *env = [BREnvironment environmentDictionary];
 ```
+
 
 Manipulating Settings
 ---------------------

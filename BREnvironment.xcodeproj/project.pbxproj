@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9C0990F190F57BE00CC2DB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0990E190F57BD00CC2DB1 /* Foundation.framework */; };
+		C9C09914190F57BE00CC2DB1 /* BREnvironment.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C9C09913190F57BE00CC2DB1 /* BREnvironment.h */; };
+		C9C09916190F57BE00CC2DB1 /* BREnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C09915190F57BE00CC2DB1 /* BREnvironment.m */; };
+		C9C0991D190F57BE00CC2DB1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0991C190F57BE00CC2DB1 /* XCTest.framework */; };
+		C9C0991E190F57BE00CC2DB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0990E190F57BD00CC2DB1 /* Foundation.framework */; };
+		C9C09920190F57BE00CC2DB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0991F190F57BE00CC2DB1 /* UIKit.framework */; };
+		C9C09923190F57BE00CC2DB1 /* libBREnvironment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0990B190F57BD00CC2DB1 /* libBREnvironment.a */; };
+		C9C09929190F57BE00CC2DB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9C09927190F57BE00CC2DB1 /* InfoPlist.strings */; };
+		C9C0992B190F57BE00CC2DB1 /* BREnvironmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C0992A190F57BE00CC2DB1 /* BREnvironmentTests.m */; };
+		C9C09939190F634600CC2DB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0990E190F57BD00CC2DB1 /* Foundation.framework */; };
+		C9C0993B190F634600CC2DB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0993A190F634600CC2DB1 /* CoreGraphics.framework */; };
+		C9C0993C190F634600CC2DB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0991F190F57BE00CC2DB1 /* UIKit.framework */; };
+		C9C09942190F634600CC2DB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9C09940190F634600CC2DB1 /* InfoPlist.strings */; };
+		C9C09944190F634600CC2DB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C09943190F634600CC2DB1 /* main.m */; };
+		C9C09948190F634600CC2DB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C09947190F634600CC2DB1 /* AppDelegate.m */; };
+		C9C0994B190F634600CC2DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C09949190F634600CC2DB1 /* Main.storyboard */; };
+		C9C09950190F634600CC2DB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C0994F190F634600CC2DB1 /* Images.xcassets */; };
+		C9C09956190F634600CC2DB1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0991C190F57BE00CC2DB1 /* XCTest.framework */; };
+		C9C09957190F634600CC2DB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0990E190F57BD00CC2DB1 /* Foundation.framework */; };
+		C9C09958190F634600CC2DB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0991F190F57BE00CC2DB1 /* UIKit.framework */; };
+		C9C09960190F634600CC2DB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9C0995E190F634600CC2DB1 /* InfoPlist.strings */; };
+		C9C09962190F634600CC2DB1 /* EnvironmentalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C09961190F634600CC2DB1 /* EnvironmentalTests.m */; };
+		C9C0996B190F636100CC2DB1 /* libBREnvironment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0990B190F57BD00CC2DB1 /* libBREnvironment.a */; };
+		C9C0996E190F63E700CC2DB1 /* EnvironmentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C0996D190F63E700CC2DB1 /* EnvironmentTableViewController.m */; };
+		C9C09972190F64ED00CC2DB1 /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9C09970190F64ED00CC2DB1 /* Environment.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9C09921190F57BE00CC2DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9C09903190F57BD00CC2DB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9C0990A190F57BD00CC2DB1;
+			remoteInfo = BREnvironment;
+		};
+		C9C09959190F634600CC2DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9C09903190F57BD00CC2DB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9C09937190F634600CC2DB1;
+			remoteInfo = Environmental;
+		};
+		C9C09969190F635A00CC2DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9C09903190F57BD00CC2DB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9C0990A190F57BD00CC2DB1;
+			remoteInfo = BREnvironment;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C9C09909190F57BD00CC2DB1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				C9C09914190F57BE00CC2DB1 /* BREnvironment.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C9C0990B190F57BD00CC2DB1 /* libBREnvironment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBREnvironment.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C0990E190F57BD00CC2DB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9C09912190F57BE00CC2DB1 /* BREnvironment-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BREnvironment-Prefix.pch"; sourceTree = "<group>"; };
+		C9C09913190F57BE00CC2DB1 /* BREnvironment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BREnvironment.h; sourceTree = "<group>"; };
+		C9C09915190F57BE00CC2DB1 /* BREnvironment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BREnvironment.m; sourceTree = "<group>"; };
+		C9C0991B190F57BE00CC2DB1 /* BREnvironmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BREnvironmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C0991C190F57BE00CC2DB1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C9C0991F190F57BE00CC2DB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C9C09926190F57BE00CC2DB1 /* BREnvironmentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BREnvironmentTests-Info.plist"; sourceTree = "<group>"; };
+		C9C09928190F57BE00CC2DB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9C0992A190F57BE00CC2DB1 /* BREnvironmentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BREnvironmentTests.m; sourceTree = "<group>"; };
+		C9C09938190F634600CC2DB1 /* Environmental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Environmental.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C0993A190F634600CC2DB1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C9C0993F190F634600CC2DB1 /* Environmental-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Environmental-Info.plist"; sourceTree = "<group>"; };
+		C9C09941190F634600CC2DB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9C09943190F634600CC2DB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9C09945190F634600CC2DB1 /* Environmental-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Environmental-Prefix.pch"; sourceTree = "<group>"; };
+		C9C09946190F634600CC2DB1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C9C09947190F634600CC2DB1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C9C0994A190F634600CC2DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9C0994F190F634600CC2DB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C9C09955190F634600CC2DB1 /* EnvironmentalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnvironmentalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C0995D190F634600CC2DB1 /* EnvironmentalTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EnvironmentalTests-Info.plist"; sourceTree = "<group>"; };
+		C9C0995F190F634600CC2DB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9C09961190F634600CC2DB1 /* EnvironmentalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnvironmentalTests.m; sourceTree = "<group>"; };
+		C9C0996C190F63E700CC2DB1 /* EnvironmentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentTableViewController.h; sourceTree = "<group>"; };
+		C9C0996D190F63E700CC2DB1 /* EnvironmentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvironmentTableViewController.m; sourceTree = "<group>"; };
+		C9C0996F190F64ED00CC2DB1 /* LocalEnvironment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LocalEnvironment.plist; sourceTree = "<group>"; };
+		C9C09970190F64ED00CC2DB1 /* Environment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9C09908190F57BD00CC2DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C0990F190F57BE00CC2DB1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C09918190F57BE00CC2DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C0991D190F57BE00CC2DB1 /* XCTest.framework in Frameworks */,
+				C9C09923190F57BE00CC2DB1 /* libBREnvironment.a in Frameworks */,
+				C9C09920190F57BE00CC2DB1 /* UIKit.framework in Frameworks */,
+				C9C0991E190F57BE00CC2DB1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C09935190F634600CC2DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C0996B190F636100CC2DB1 /* libBREnvironment.a in Frameworks */,
+				C9C0993B190F634600CC2DB1 /* CoreGraphics.framework in Frameworks */,
+				C9C0993C190F634600CC2DB1 /* UIKit.framework in Frameworks */,
+				C9C09939190F634600CC2DB1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C09952190F634600CC2DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C09956190F634600CC2DB1 /* XCTest.framework in Frameworks */,
+				C9C09958190F634600CC2DB1 /* UIKit.framework in Frameworks */,
+				C9C09957190F634600CC2DB1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9C09902190F57BD00CC2DB1 = {
+			isa = PBXGroup;
+			children = (
+				C9C09910190F57BE00CC2DB1 /* BREnvironment */,
+				C9C09924190F57BE00CC2DB1 /* BREnvironmentTests */,
+				C9C0993D190F634600CC2DB1 /* Environmental */,
+				C9C0995B190F634600CC2DB1 /* EnvironmentalTests */,
+				C9C0990D190F57BD00CC2DB1 /* Frameworks */,
+				C9C0990C190F57BD00CC2DB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9C0990C190F57BD00CC2DB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9C0990B190F57BD00CC2DB1 /* libBREnvironment.a */,
+				C9C0991B190F57BE00CC2DB1 /* BREnvironmentTests.xctest */,
+				C9C09938190F634600CC2DB1 /* Environmental.app */,
+				C9C09955190F634600CC2DB1 /* EnvironmentalTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9C0990D190F57BD00CC2DB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9C0990E190F57BD00CC2DB1 /* Foundation.framework */,
+				C9C0991C190F57BE00CC2DB1 /* XCTest.framework */,
+				C9C0991F190F57BE00CC2DB1 /* UIKit.framework */,
+				C9C0993A190F634600CC2DB1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9C09910190F57BE00CC2DB1 /* BREnvironment */ = {
+			isa = PBXGroup;
+			children = (
+				C9C09913190F57BE00CC2DB1 /* BREnvironment.h */,
+				C9C09915190F57BE00CC2DB1 /* BREnvironment.m */,
+				C9C09911190F57BE00CC2DB1 /* Supporting Files */,
+			);
+			path = BREnvironment;
+			sourceTree = "<group>";
+		};
+		C9C09911190F57BE00CC2DB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9C09912190F57BE00CC2DB1 /* BREnvironment-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9C09924190F57BE00CC2DB1 /* BREnvironmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9C0992A190F57BE00CC2DB1 /* BREnvironmentTests.m */,
+				C9C09925190F57BE00CC2DB1 /* Supporting Files */,
+			);
+			path = BREnvironmentTests;
+			sourceTree = "<group>";
+		};
+		C9C09925190F57BE00CC2DB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9C09926190F57BE00CC2DB1 /* BREnvironmentTests-Info.plist */,
+				C9C09927190F57BE00CC2DB1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9C0993D190F634600CC2DB1 /* Environmental */ = {
+			isa = PBXGroup;
+			children = (
+				C9C09970190F64ED00CC2DB1 /* Environment.plist */,
+				C9C0996F190F64ED00CC2DB1 /* LocalEnvironment.plist */,
+				C9C09946190F634600CC2DB1 /* AppDelegate.h */,
+				C9C09947190F634600CC2DB1 /* AppDelegate.m */,
+				C9C0996C190F63E700CC2DB1 /* EnvironmentTableViewController.h */,
+				C9C0996D190F63E700CC2DB1 /* EnvironmentTableViewController.m */,
+				C9C09949190F634600CC2DB1 /* Main.storyboard */,
+				C9C0994F190F634600CC2DB1 /* Images.xcassets */,
+				C9C0993E190F634600CC2DB1 /* Supporting Files */,
+			);
+			path = Environmental;
+			sourceTree = "<group>";
+		};
+		C9C0993E190F634600CC2DB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9C0993F190F634600CC2DB1 /* Environmental-Info.plist */,
+				C9C09940190F634600CC2DB1 /* InfoPlist.strings */,
+				C9C09943190F634600CC2DB1 /* main.m */,
+				C9C09945190F634600CC2DB1 /* Environmental-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9C0995B190F634600CC2DB1 /* EnvironmentalTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9C09961190F634600CC2DB1 /* EnvironmentalTests.m */,
+				C9C0995C190F634600CC2DB1 /* Supporting Files */,
+			);
+			path = EnvironmentalTests;
+			sourceTree = "<group>";
+		};
+		C9C0995C190F634600CC2DB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9C0995D190F634600CC2DB1 /* EnvironmentalTests-Info.plist */,
+				C9C0995E190F634600CC2DB1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9C0990A190F57BD00CC2DB1 /* BREnvironment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C0992E190F57BE00CC2DB1 /* Build configuration list for PBXNativeTarget "BREnvironment" */;
+			buildPhases = (
+				C9C09907190F57BD00CC2DB1 /* Sources */,
+				C9C09908190F57BD00CC2DB1 /* Frameworks */,
+				C9C09909190F57BD00CC2DB1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BREnvironment;
+			productName = BREnvironment;
+			productReference = C9C0990B190F57BD00CC2DB1 /* libBREnvironment.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C9C0991A190F57BE00CC2DB1 /* BREnvironmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C09931190F57BE00CC2DB1 /* Build configuration list for PBXNativeTarget "BREnvironmentTests" */;
+			buildPhases = (
+				C9C09917190F57BE00CC2DB1 /* Sources */,
+				C9C09918190F57BE00CC2DB1 /* Frameworks */,
+				C9C09919190F57BE00CC2DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9C09922190F57BE00CC2DB1 /* PBXTargetDependency */,
+			);
+			name = BREnvironmentTests;
+			productName = BREnvironmentTests;
+			productReference = C9C0991B190F57BE00CC2DB1 /* BREnvironmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9C09937190F634600CC2DB1 /* Environmental */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C09967190F634600CC2DB1 /* Build configuration list for PBXNativeTarget "Environmental" */;
+			buildPhases = (
+				C9C09934190F634600CC2DB1 /* Sources */,
+				C9C09935190F634600CC2DB1 /* Frameworks */,
+				C9C09936190F634600CC2DB1 /* Resources */,
+				C9C09973190F67BE00CC2DB1 /* Copy LocalEnvironment.plist */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9C0996A190F635A00CC2DB1 /* PBXTargetDependency */,
+			);
+			name = Environmental;
+			productName = Environmental;
+			productReference = C9C09938190F634600CC2DB1 /* Environmental.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9C09954190F634600CC2DB1 /* EnvironmentalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C09968190F634600CC2DB1 /* Build configuration list for PBXNativeTarget "EnvironmentalTests" */;
+			buildPhases = (
+				C9C09951190F634600CC2DB1 /* Sources */,
+				C9C09952190F634600CC2DB1 /* Frameworks */,
+				C9C09953190F634600CC2DB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9C0995A190F634600CC2DB1 /* PBXTargetDependency */,
+			);
+			name = EnvironmentalTests;
+			productName = EnvironmentalTests;
+			productReference = C9C09955190F634600CC2DB1 /* EnvironmentalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9C09903190F57BD00CC2DB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Blue Rocket, Inc.";
+				TargetAttributes = {
+					C9C0991A190F57BE00CC2DB1 = {
+						TestTargetID = C9C09937190F634600CC2DB1;
+					};
+					C9C09954190F634600CC2DB1 = {
+						TestTargetID = C9C09937190F634600CC2DB1;
+					};
+				};
+			};
+			buildConfigurationList = C9C09906190F57BD00CC2DB1 /* Build configuration list for PBXProject "BREnvironment" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9C09902190F57BD00CC2DB1;
+			productRefGroup = C9C0990C190F57BD00CC2DB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9C0990A190F57BD00CC2DB1 /* BREnvironment */,
+				C9C0991A190F57BE00CC2DB1 /* BREnvironmentTests */,
+				C9C09937190F634600CC2DB1 /* Environmental */,
+				C9C09954190F634600CC2DB1 /* EnvironmentalTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9C09919190F57BE00CC2DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C09929190F57BE00CC2DB1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C09936190F634600CC2DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C09950190F634600CC2DB1 /* Images.xcassets in Resources */,
+				C9C09942190F634600CC2DB1 /* InfoPlist.strings in Resources */,
+				C9C0994B190F634600CC2DB1 /* Main.storyboard in Resources */,
+				C9C09972190F64ED00CC2DB1 /* Environment.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C09953190F634600CC2DB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C09960190F634600CC2DB1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C9C09973190F67BE00CC2DB1 /* Copy LocalEnvironment.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy LocalEnvironment.plist";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "filePath=${SRCROOT}/Environmental/LocalEnvironment.plist\nif [ -e \"$filePath\" ]; then\ncp \"$filePath\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\necho $filePath copied to ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\nelse\necho $filePath not found.\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9C09907190F57BD00CC2DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C09916190F57BE00CC2DB1 /* BREnvironment.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C09917190F57BE00CC2DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C0992B190F57BE00CC2DB1 /* BREnvironmentTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C09934190F634600CC2DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C09948190F634600CC2DB1 /* AppDelegate.m in Sources */,
+				C9C0996E190F63E700CC2DB1 /* EnvironmentTableViewController.m in Sources */,
+				C9C09944190F634600CC2DB1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9C09951190F634600CC2DB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C09962190F634600CC2DB1 /* EnvironmentalTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9C09922190F57BE00CC2DB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9C0990A190F57BD00CC2DB1 /* BREnvironment */;
+			targetProxy = C9C09921190F57BE00CC2DB1 /* PBXContainerItemProxy */;
+		};
+		C9C0995A190F634600CC2DB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9C09937190F634600CC2DB1 /* Environmental */;
+			targetProxy = C9C09959190F634600CC2DB1 /* PBXContainerItemProxy */;
+		};
+		C9C0996A190F635A00CC2DB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9C0990A190F57BD00CC2DB1 /* BREnvironment */;
+			targetProxy = C9C09969190F635A00CC2DB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9C09927190F57BE00CC2DB1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9C09928190F57BE00CC2DB1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9C09940190F634600CC2DB1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9C09941190F634600CC2DB1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9C09949190F634600CC2DB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9C0994A190F634600CC2DB1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9C0995E190F634600CC2DB1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9C0995F190F634600CC2DB1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9C0992C190F57BE00CC2DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C9C0992D190F57BE00CC2DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9C0992F190F57BE00CC2DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/BREnvironment.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BREnvironment/BREnvironment-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C9C09930190F57BE00CC2DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/BREnvironment.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BREnvironment/BREnvironment-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C9C09932190F57BE00CC2DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Environmental.app/Environmental";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BREnvironment/BREnvironment-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BREnvironmentTests/BREnvironmentTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C9C09933190F57BE00CC2DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Environmental.app/Environmental";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BREnvironment/BREnvironment-Prefix.pch";
+				INFOPLIST_FILE = "BREnvironmentTests/BREnvironmentTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		C9C09963190F634600CC2DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Environmental/Environmental-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Environmental/Environmental-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C9C09964190F634600CC2DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Environmental/Environmental-Prefix.pch";
+				INFOPLIST_FILE = "Environmental/Environmental-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C9C09965190F634600CC2DB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Environmental.app/Environmental";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Environmental/Environmental-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "EnvironmentalTests/EnvironmentalTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C9C09966190F634600CC2DB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Environmental.app/Environmental";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Environmental/Environmental-Prefix.pch";
+				INFOPLIST_FILE = "EnvironmentalTests/EnvironmentalTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9C09906190F57BD00CC2DB1 /* Build configuration list for PBXProject "BREnvironment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C0992C190F57BE00CC2DB1 /* Debug */,
+				C9C0992D190F57BE00CC2DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C0992E190F57BE00CC2DB1 /* Build configuration list for PBXNativeTarget "BREnvironment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C0992F190F57BE00CC2DB1 /* Debug */,
+				C9C09930190F57BE00CC2DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C09931190F57BE00CC2DB1 /* Build configuration list for PBXNativeTarget "BREnvironmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C09932190F57BE00CC2DB1 /* Debug */,
+				C9C09933190F57BE00CC2DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C09967190F634600CC2DB1 /* Build configuration list for PBXNativeTarget "Environmental" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C09963190F634600CC2DB1 /* Debug */,
+				C9C09964190F634600CC2DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C9C09968190F634600CC2DB1 /* Build configuration list for PBXNativeTarget "EnvironmentalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9C09965190F634600CC2DB1 /* Debug */,
+				C9C09966190F634600CC2DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9C09903190F57BD00CC2DB1 /* Project object */;
+}

@@ -1,0 +1,4 @@
+*.xccheckout
+xcuserdata
+.DS_Store
+LocalEnvironment.plist
