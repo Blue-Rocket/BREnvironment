@@ -1,7 +1,7 @@
 BREnvironment
 =============
 
-A little helper for supporting different deployment environments during development, a.k.a. **DDEDD**.
+A little Objective-C helper class for supporting different deployment environments during development, a.k.a. **DDEDD**.
 
 This project provides a way to define *environment* settings in a **Environment.plist** file. For example you might define a *baseURL* as `http://my.awesome.service` for some web service your app communicates with. During development you might want to have the app use a *test* server, however, so **BREnvironment** also supports a **LocalEnvironment.plist** file where you can override that *baseURL* setting to `http://my.crashful.service`.
 
