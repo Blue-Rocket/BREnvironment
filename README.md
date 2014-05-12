@@ -46,14 +46,47 @@ Environment settings can be manipulated as well, in either a transient fashion o
 ```
 
 
-Setup in 3 easy steps
----------------------
+# Setup in 3 easy steps
 
-First, add `BREnvironment.h` and `BREnvironment.m` to your project, by any means necessary (file copy, git submodule, etc).
+The first step is to integrate BREnvironment into your own project. You can integrate
+BRCocoaLumberjack via [CocoaPods](http://cocoapods.org/), or manually just copy the
+class files to your own project.
 
-Second, add an `Environment.plist` file to your project. This file *should* be part of your app's build target(s).
+## Step 1: integrate via CocoaPods
 
-Third, create a `LocalEnvironment.plist` file, at the root of your project. Add this to your SCM's **ignore** list so it is **not** added to version control. This is an *optional* file, so we can't add it directly to any build target(s). Instead, add a **Run Script** build step to your app's build phases that copies the file if it exists, for example:
+Install CocoaPods if not already available:
+
+```bash
+$ [sudo] gem install cocoapods
+$ pod setup
+```
+
+Change to the directory of your Xcode project, and create a file named `Podfile` with
+contents similar to this:
+
+	platform :ios, '5.0' 
+	pod 'BREnvironment', '~> 1.0'
+
+Install into your project:
+
+``` bash
+$ pod install
+```
+
+Open your project in Xcode using the **.xcworkspace** file CocoaPods generated.
+
+## Step 1: integrate manually
+
+Only do this if you're *not* using CocoaPods. Add `BREnvironment.h` and `BREnvironment.m` to your project, by any means necessary (file copy, git submodule, etc).
+
+## Step 2: create your default environment
+
+Add an `Environment.plist` file to your project. This file *should* be part of your app's build target(s).
+
+
+## Step 3: create your local environment
+
+Create a `LocalEnvironment.plist` file, at the root of your project. Add this to your SCM's **ignore** list so it is **not** added to version control. This is an *optional* file, so we can't add it directly to any build target(s). Instead, add a **Run Script** build step to your app's build phases that copies the file if it exists, for example:
 
 ```sh
 filePath=${PROJECT_DIR}/LocalEnvironment.plist
@@ -64,6 +97,8 @@ else
 	echo $filePath not found.
 fi
 ```
+
+## Step 4
 
 Forth, ah ha! Just seeing if you actually read this far. There *are* only 3 easy steps!
 
