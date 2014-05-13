@@ -8,37 +8,181 @@
 
 #import <Foundation/Foundation.h>
 
+/// Helper class for supporting environment-specific settings during development.
+///
+/// The general idea is to include an `Environment.plist` file in your project that contains
+/// basic default production environment settings for your app, such as a base URL to connect to
+/// for some web service. During development, if you'd like to use some other web service
+/// server, you include a `LocalEnvironment.plist` in your build that overrides the default
+/// production settings. The `LocalEnvironment.plist` file should *not* be added to any source
+/// control system.
+///
+/// To access the environment settings, this class provides helper getter methods like:
+///
+///    BREnvironment env = [BREnvironment sharedEnvironment];
+///    NSURL *serviceURL = [env URLForKey:@"baseURL"];
+///    BOOL sassy = [env boolForKey:@"talkBack"];
+///
+/// You can also access the entire environment as a dictionary with a single line:
+///
+///    NSDictionary *env = [BREnvironment environmentDictionary];
+///
+/// BREnvironment also acts as a proxy for `NSUserDefaults`. All values available via
+///
+///    [NSUserDefaults standardUserDefaults];
+///
+/// are also available via any of the accessors in this class. You can save a value
+/// into `NSUserDefaults` using the `saveEnvironmentValue:forKey:` method.
 @interface BREnvironment : NSObject
 
-// get all environment values as a dictionary
+///
+/// @name Accessors
+///
+
+/**
+ * Get all environment values as a dictionary.
+ *
+ * @return a dictionary of all available environment settings
+ */
 - (NSDictionary *)environmentDictionary;
 
-// convenience methods to extract values from the environment dictionary as specific types
+/**
+ * Convenience method to extract a `NSURL` from an environment setting.
+ *
+ * The setting value is assumed to be a `NSString`.
+ *
+ * @param key the setting to get
+ * @return the setting value as a `NSURL`
+ */
 - (NSURL *)URLForKey:(NSString *)key;
+
+/**
+ * Convenience method to extract a `NSNumber` from an environment setting.
+ *
+ * The setting value is assumed to be a `NSNumber` already, this simply
+ * casts the value.
+ *
+ * @param key the setting to get
+ * @return the setting value as a `NSNumber`
+ */
 - (NSNumber *)numberForKey:(NSString *)key;
+
+/**
+ * Convenience method to extract a `NSString` from an environment setting.
+ *
+ * The setting value is assumed to be a `NSString` already, this simply
+ * casts the value.
+ *
+ * @param key the setting to get
+ * @return the setting value as a `NSString`
+ */
 - (NSString *)stringForKey:(NSString *)key;
+
+/**
+ * Convenience method to extract a `NSArray` from an environment setting.
+ *
+ * The setting value is assumed to be a `NSArray` already, this simply
+ * casts the value.
+ *
+ * @param key the setting to get
+ * @return the setting value as a `NSArray`
+ */
 - (NSArray *)arrayForKey:(NSString *)key;
+
+/**
+ * Convenience method to extract a `BOOL` from an environment setting.
+ *
+ * The setting value is assumed to be a `NSNumber`.
+ *
+ * @param key the setting to get
+ * @return the setting value as a `BOOL`
+ */
 - (BOOL)boolForKey:(NSString *)key;
 
-// set a dynamic environment value for the given key; if value is nil the key will be removed;
-// this value is NOT persisted across app restarts
+#pragma mark - ObjC literal syntax
+
+/// Support modern Objective-C literal getter syntax to query environment settings.
+///
+/// This method allows you to access values from the environment like this:
+///
+///    NSString *foo = [BREnvironment sharedEnvironment][@"foo"];
+///
+/// @param key the setting to get
+/// @return the setting value
+- (id)objectForKeyedSubscript:(id)key;
+
+
+/**
+ * Support modern Objective-C literal setter syntax to set transient environment settings.
+ *
+ * This method allows you to set a *transient* value into the environment like this:
+ *
+ *     NSString *foo = [BREnvironment sharedEnvironment][@"foo"];
+ *
+ * @param key the name of the setting to set
+ * @param obj the value of the setting
+ * @sees etTransientEnvironmentValue:forKey:
+ */
+- (void)setObject:(id)obj forKeyedSubscript:(id<NSCopying>)key;
+
+///
+/// @name Updating environment values
+///
+
+/**
+ * Set a dynamic environment value.
+ *
+ * This value is **not** persisted across app restarts. If `value` is `nil` the key will be removed
+ * from the environment.
+ *
+ * @param value the value to set for the associated `key`
+ * @param key the key to use
+ */
 - (void)setTransientEnvironmentValue:(id)value forKey:(NSString *)key;
 
-// persist an environment value, e.g. a service URL; the value will be persisted across app restarts
+/**
+ * Persist an environment value.
+ *
+ * This value **is** persisted across app restarts by saving the value into `NSUserDefaults`.
+ * If `value` is `nil` the key will be removed from the environment.
+ *
+ * @param value the value to set for the associated `key`
+ * @param key the key to use
+ */
 + (void)saveEnvironmentValue:(id)value forKey:(NSString *)key;
-
-// return YES if UNITTEST environment flag present
-+ (BOOL)isUnitTest;
 
 #pragma mark - Shared environment
 
-// get the bundle used by the shared environment
+///
+/// @name Shared environment
+///
+
+/**
+ * Get the bundle used by the shared environment.
+ *
+ * @return the bundle
+ */
 + (NSBundle *)sharedEnvironmentBundle;
 
-// set the bundle used by the shared environment; only works before the shared environment is created
+/**
+ * Set the bundle used by the shared environment.
+ *
+ * This only works before the shared environment is created for the first time, so should be
+ * called early on in the application's life.
+ *
+ * @param bundle the bundle to use for the shared environment
+ */
 + (void)setSharedEnvironmentBundle:(NSBundle *)bundle;
 
-// get a singleton shared environment; the object is instantiated the first time the method is called
+/**
+ * Get a singleton shared environment instance.
+ *
+ * The object is instantiated the first time the method is called, and will use the
+ * `[NSBundle mainBundle]` unless a different bundle has been passed to
+ * `setSharedEnvironmentBundle:` before this is called the first time.
+ *
+ * @return the singleton environment instance
+ */
 + (instancetype)sharedEnvironment;
 
 #pragma mark - Shared environment convenience methods
@@ -46,9 +190,19 @@
 + (NSDictionary *)environmentDictionary;
 + (NSDictionary *)environmentDictionaryWithBundle:(NSBundle *)bundle;
 
-#pragma mark - ObjC literal syntax
+#pragma mark - Utilities
 
-- (id)objectForKeyedSubscript:(id)key;
-- (void)setObject:(id)obj forKeyedSubscript:(id<NSCopying>)key;
+/// @name Other utilities
+
+/**
+ * Test if a `UNITTEST` environment flag is present.
+ *
+ * This will check the `NSProcessInfo` environment for a flag named `UNITTEST`. This can be useful
+ * for disabling normal application startup routines when running as an automated test.
+ *
+ * @return `YES` if a `UNITTEST` environment variable is set
+ */
++ (BOOL)isUnitTest;
+
 
 @end
