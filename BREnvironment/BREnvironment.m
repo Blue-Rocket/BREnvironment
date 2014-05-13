@@ -19,7 +19,7 @@ static NSBundle *SharedEnvironmentBundle;
 }
 
 - (instancetype)initWithBundle:(NSBundle *)bundle {
-	if ((self = [super init])) {
+	if ( (self = [super init]) ) {
 		staticEnvironment = [NSDictionary dictionaryWithContentsOfFile:[bundle pathForResource:@"Environment" ofType:@"plist"]];
 		staticLocalEnvironment = [NSDictionary dictionaryWithContentsOfFile:[bundle pathForResource:@"LocalEnvironment" ofType:@"plist"]];
 		[[NSNotificationCenter defaultCenter] addObserver:self
@@ -44,7 +44,7 @@ static NSBundle *SharedEnvironmentBundle;
 	NSDictionary *result = nil;
 	@synchronized(self)
 	{
-		if (mergedEnvironment == nil) {
+		if ( mergedEnvironment == nil ) {
 			[[NSUserDefaults standardUserDefaults] synchronize];
 			NSDictionary *userDefaultsDictionary = [[NSUserDefaults standardUserDefaults] dictionaryRepresentation];
 			NSMutableDictionary *merged = [[NSMutableDictionary alloc] initWithCapacity:([staticEnvironment count]
@@ -86,13 +86,12 @@ static NSBundle *SharedEnvironmentBundle;
 - (void)setTransientEnvironmentValue:(id)value forKey:(NSString *)key {
 	@synchronized(self)
 	{
-		if (mutableEnvironment == nil) {
+		if ( mutableEnvironment == nil ) {
 			mutableEnvironment = [[NSMutableDictionary alloc] initWithCapacity:4];
 		}
-		if (value == nil) {
+		if ( value == nil ) {
 			[mutableEnvironment removeObjectForKey:key];
-		}
-		else {
+		} else {
 			[mutableEnvironment setValue:value forKey:key];
 		}
 		mergedEnvironment = nil;

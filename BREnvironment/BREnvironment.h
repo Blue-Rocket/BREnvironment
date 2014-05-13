@@ -15,9 +15,9 @@
 
 // convenience methods to extract values from the environment dictionary as specific types
 - (NSURL *)URLForKey:(NSString *)key;
-- (NSNumber*)numberForKey:(NSString *)key;
+- (NSNumber *)numberForKey:(NSString *)key;
 - (NSString *)stringForKey:(NSString *)key;
-- (NSArray*)arrayForKey:(NSString *)key;
+- (NSArray *)arrayForKey:(NSString *)key;
 - (BOOL)boolForKey:(NSString *)key;
 
 // set a dynamic environment value for the given key; if value is nil the key will be removed;
