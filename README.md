@@ -72,7 +72,7 @@ The keen observer (that's you!) might notice that is the Objective-C KVC literal
 [BREnvironment registerEnvironmentProvider:[ParseConfigEnvironmentProvider new]];
 ```
 
-`BREnvironment` will return the *first non-nil* value found in any registered provider, traversing the providers in the order they are registered.
+`BREnvironment` will return the *first non-nil* value found in any registered provider, traversing the providers in the order they are registered. If no provider provides a value, then the usual search paths will be used, so the app can fall back to values included by the app itself.
 
 # Setup in 3 easy steps
 
