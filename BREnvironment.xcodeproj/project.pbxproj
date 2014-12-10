@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C99A13AE1A37FCC00075CF52 /* ExampleEnvironmentProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C99A13AD1A37FCC00075CF52 /* ExampleEnvironmentProvider.m */; };
 		C9C0990F190F57BE00CC2DB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C0990E190F57BD00CC2DB1 /* Foundation.framework */; };
 		C9C09914190F57BE00CC2DB1 /* BREnvironment.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C9C09913190F57BE00CC2DB1 /* BREnvironment.h */; };
 		C9C09916190F57BE00CC2DB1 /* BREnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C09915190F57BE00CC2DB1 /* BREnvironment.m */; };
@@ -72,6 +73,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C99A13AC1A37FCC00075CF52 /* ExampleEnvironmentProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleEnvironmentProvider.h; sourceTree = "<group>"; };
+		C99A13AD1A37FCC00075CF52 /* ExampleEnvironmentProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleEnvironmentProvider.m; sourceTree = "<group>"; };
 		C9C0990B190F57BD00CC2DB1 /* libBREnvironment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBREnvironment.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C0990E190F57BD00CC2DB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9C09912190F57BE00CC2DB1 /* BREnvironment-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BREnvironment-Prefix.pch"; sourceTree = "<group>"; };
@@ -226,6 +229,8 @@
 				C9C09947190F634600CC2DB1 /* AppDelegate.m */,
 				C9C0996C190F63E700CC2DB1 /* EnvironmentTableViewController.h */,
 				C9C0996D190F63E700CC2DB1 /* EnvironmentTableViewController.m */,
+				C99A13AC1A37FCC00075CF52 /* ExampleEnvironmentProvider.h */,
+				C99A13AD1A37FCC00075CF52 /* ExampleEnvironmentProvider.m */,
 				C9C09949190F634600CC2DB1 /* Main.storyboard */,
 				C9C0994F190F634600CC2DB1 /* Images.xcassets */,
 				C9C0993E190F634600CC2DB1 /* Supporting Files */,
@@ -446,6 +451,7 @@
 				C9C09948190F634600CC2DB1 /* AppDelegate.m in Sources */,
 				C9C0996E190F63E700CC2DB1 /* EnvironmentTableViewController.m in Sources */,
 				C9C09944190F634600CC2DB1 /* main.m in Sources */,
+				C99A13AE1A37FCC00075CF52 /* ExampleEnvironmentProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +768,7 @@
 				C9C09964190F634600CC2DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9C09968190F634600CC2DB1 /* Build configuration list for PBXNativeTarget "EnvironmentalTests" */ = {
 			isa = XCConfigurationList;
@@ -770,6 +777,7 @@
 				C9C09966190F634600CC2DB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

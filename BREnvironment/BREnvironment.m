@@ -10,6 +10,7 @@
 
 static BREnvironment *SharedEnvironment;
 static NSBundle *SharedEnvironmentBundle;
+static NSMutableArray *EnvironmentProviders;
 
 @implementation BREnvironment {
 	NSDictionary *staticEnvironment;
@@ -61,26 +62,37 @@ static NSBundle *SharedEnvironmentBundle;
 	return result;
 }
 
+- (id)objectForKey:(NSString *)key {
+	id value = [self environmentDictionary][key];
+	for ( id<BREnvironmentProvider> provider in EnvironmentProviders ) {
+		id providerValue = provider[key];
+		if ( providerValue != nil ) {
+			value = providerValue;
+			break;
+		}
+	}
+	return value;
+}
+
 - (NSURL *)URLForKey:(NSString *)key {
-	NSString *value = [self environmentDictionary][key];
+	NSString *value = [self objectForKey:key];
 	return [NSURL URLWithString:value];
 }
 
 - (NSNumber *)numberForKey:(NSString *)key {
-	NSNumber *value = (NSNumber *)[self environmentDictionary][key];
-	return value;
+	return [self objectForKey:key];
 }
 
 - (NSString *)stringForKey:(NSString *)key {
-	return [self environmentDictionary][key];
+	return [self objectForKey:key];
 }
 
 - (NSArray *)arrayForKey:(NSString *)key {
-	return [self environmentDictionary][key];
+	return [self objectForKey:key];
 }
 
 - (BOOL)boolForKey:(NSString *)key {
-	return [[self environmentDictionary][key] boolValue];
+	return [[self objectForKey:key] boolValue];
 }
 
 - (void)setTransientEnvironmentValue:(id)value forKey:(NSString *)key {
@@ -105,11 +117,11 @@ static NSBundle *SharedEnvironmentBundle;
 }
 
 - (id)valueForKey:(NSString *)key {
-	return [self environmentDictionary][key];
+	return [self objectForKey:key];
 }
 
 - (id)objectForKeyedSubscript:(id)key {
-	return [self environmentDictionary][key];
+	return [self objectForKey:key];
 }
 
 - (void)setObject:(id)obj forKeyedSubscript:(id<NSCopying>)key {
@@ -132,6 +144,23 @@ static NSBundle *SharedEnvironmentBundle;
 	    SharedEnvironment = [[BREnvironment alloc] initWithBundle:[BREnvironment sharedEnvironmentBundle]];
 	});
 	return SharedEnvironment;
+}
+
++ (void)registerEnvironmentProvider:(id<BREnvironmentProvider>)provider {
+	if ( provider == nil ) {
+		return;
+	}
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		EnvironmentProviders = [[NSMutableArray alloc] initWithCapacity:4];
+	});
+	[EnvironmentProviders addObject:provider];
+}
+
++ (void)unregisterEnvironmentProvider:(id<BREnvironmentProvider>)provider {
+	if ( provider ) {
+		[EnvironmentProviders removeObjectIdenticalTo:provider];
+	}
 }
 
 + (NSDictionary *)environmentDictionaryWithBundle:(NSBundle *)bundle {

@@ -12,14 +12,12 @@
 static NSString * const kCellIdentifier = @"Cell";
 
 @implementation EnvironmentTableViewController {
-	NSDictionary *model;
 	NSArray *keys;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-	model = [BREnvironment environmentDictionary];
-	keys = [[model allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+	keys = [[[BREnvironment environmentDictionary] allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
 }
 
 #pragma mark - Table view data source
@@ -29,14 +27,19 @@ static NSString * const kCellIdentifier = @"Cell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [keys count];
+    return [keys count] + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
-    
-	NSString *key = keys[indexPath.row];
-	id val = model[keys[indexPath.row]];
+	
+	NSString *key;
+	if ( indexPath.row >= [keys count] ) {
+		key = @"Magic";
+	} else {
+		key = keys[indexPath.row];
+	}
+	id val = [BREnvironment sharedEnvironment][key];
 	cell.textLabel.text = key;
 	cell.detailTextLabel.text = [val description];
     

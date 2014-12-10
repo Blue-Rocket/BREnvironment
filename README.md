@@ -46,6 +46,34 @@ Environment settings can be manipulated as well, in either a transient fashion o
 ```
 
 
+Custom Environment Hook
+-----------------------
+
+You can also register your own `BREnvironmentProvider` instances to provide environment values managed outside the areas already managed directly. The API is extremely simple:
+
+```objc
+@protocol BREnvironmentProvider <NSObject>
+
+/**
+ Get an environment value for a given key.
+ 
+ @param key The key to get the associated environment value for.
+ @return The object, or @c nil if not available.
+ */
+- (id)objectForKeyedSubscript:(id)key;
+
+@end
+```
+
+The keen observer (that's you!) might notice that is the Objective-C KVC literal subscript access method. One example use case for this functionality would be to hook into Parse Config values, as demonstrated in this fictional code:
+
+```objc
+// register a Parse Config hook
+[BREnvironment registerEnvironmentProvider:[ParseConfigEnvironmentProvider new]];
+```
+
+`BREnvironment` will return the *first non-nil* value found in any registered provider, traversing the providers in the order they are registered. If no provider provides a value, then the usual search paths will be used, so the app can fall back to values included by the app itself.
+
 # Setup in 3 easy steps
 
 The first step is to integrate BREnvironment into your own project. You can integrate

@@ -8,6 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ An object that can be queried for environment values. These can be registered with @c BREnvironment
+ to allow extending where environment values come from.
+ */
+@protocol BREnvironmentProvider <NSObject>
+
+/**
+ Get an environment value for a given key.
+ 
+ @param key The key to get the associated environment value for.
+ @return The object, or @c nil if not available.
+ */
+- (id)objectForKeyedSubscript:(id)key;
+
+@end
+
 /// Helper class for supporting environment-specific settings during development.
 ///
 /// The general idea is to include an `Environment.plist` file in your project that contains
@@ -184,6 +200,20 @@
  * @return the singleton environment instance
  */
 + (instancetype)sharedEnvironment;
+
+/**
+ * Register a @c BREnvironmentProvider for all @c BREnvironment instances to use.
+ *
+ * @param provider The provider to register.
+ */
++ (void)registerEnvironmentProvider:(id<BREnvironmentProvider>)provider;
+
+/**
+ * Unregister a @c BREnvironmentProvider for all @c BREnvironment instances to use.
+ *
+ * @param provider The provider to register.
+ */
++ (void)unregisterEnvironmentProvider:(id<BREnvironmentProvider>)provider;
 
 #pragma mark - Shared environment convenience methods
 
