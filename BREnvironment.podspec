@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BREnvironment"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "A little Objective-C helper class for supporting different deployment environments during development."
   s.description  = <<-DESC
                    Provides an easy way to define *environment* settings in a
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "5.0"
 
-  s.source       = { :git => "https://github.com/Blue-Rocket/BREnvironment.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/Blue-Rocket/BREnvironment.git", :tag => "1.1.0" }
   s.source_files  = "BREnvironment/*.{h,m}"
 
   s.framework  = "Foundation"
