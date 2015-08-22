@@ -49,7 +49,7 @@
 ///
 /// are also available via any of the accessors in this class. You can save a value
 /// into `NSUserDefaults` using the `saveEnvironmentValue:forKey:` method.
-@interface BREnvironment : NSObject
+@interface BREnvironment : NSObject <NSCopying>
 
 ///
 /// @name Accessors
