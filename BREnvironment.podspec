@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BREnvironment"
-  s.version      = "1.1.0"
+  s.version      = "1.2.0"
   s.summary      = "A little Objective-C helper class for supporting different deployment environments during development."
   s.description  = <<-DESC
                    Provides an easy way to define *environment* settings in a

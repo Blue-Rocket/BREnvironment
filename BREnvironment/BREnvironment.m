@@ -21,8 +21,10 @@ static NSMutableArray *EnvironmentProviders;
 
 - (instancetype)initWithBundle:(NSBundle *)bundle {
 	if ( (self = [super init]) ) {
-		staticEnvironment = [NSDictionary dictionaryWithContentsOfFile:[bundle pathForResource:@"Environment" ofType:@"plist"]];
-		staticLocalEnvironment = [NSDictionary dictionaryWithContentsOfFile:[bundle pathForResource:@"LocalEnvironment" ofType:@"plist"]];
+		if ( bundle ) {
+			staticEnvironment = [NSDictionary dictionaryWithContentsOfFile:[bundle pathForResource:@"Environment" ofType:@"plist"]];
+			staticLocalEnvironment = [NSDictionary dictionaryWithContentsOfFile:[bundle pathForResource:@"LocalEnvironment" ofType:@"plist"]];
+		}
 		[[NSNotificationCenter defaultCenter] addObserver:self
 		                                         selector:@selector(userDefaultsDidChange:)
 		                                             name:NSUserDefaultsDidChangeNotification object:nil];
@@ -181,6 +183,17 @@ static NSMutableArray *EnvironmentProviders;
 	//       compiled as a dependent project, then the unit test target is compiled. Thus the unit test
 	//       scheme must add a UNITTEST environment variable for this to work.
 	return [[[NSProcessInfo processInfo] environment][@"UNITTEST"] isEqualToString:@"1"];
+}
+
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+	BREnvironment *env = [(BREnvironment *)[[self class] allocWithZone:zone] initWithBundle:nil];
+	env->staticEnvironment = staticEnvironment;
+	env->staticLocalEnvironment = staticLocalEnvironment;
+	env->mergedEnvironment = mergedEnvironment;
+	env->mutableEnvironment = [mutableEnvironment mutableCopy];
+	return env;
 }
 
 @end
