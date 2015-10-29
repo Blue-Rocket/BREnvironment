@@ -227,10 +227,11 @@
 /**
  * Test if a `UNITTEST` environment flag is present.
  *
- * This will check the `NSProcessInfo` environment for a flag named `UNITTEST`. This can be useful
- * for disabling normal application startup routines when running as an automated test.
+ * This will check for either the availability of the `XCTestCase` class or an environment 
+ * property named `UNITTEST` equal to `1`. This can be useful for disabling normal application
+ * startup routines when running as an automated test.
  *
- * @return `YES` if a `UNITTEST` environment variable is set
+ * @return `YES` if a unit testing is detected.
  */
 + (BOOL)isUnitTest;
 

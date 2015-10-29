@@ -182,7 +182,7 @@ static NSMutableArray *EnvironmentProviders;
 	// NOTE: preprocessor macros don't work to tell if running as a unit test, because the normal app target is
 	//       compiled as a dependent project, then the unit test target is compiled. Thus the unit test
 	//       scheme must add a UNITTEST environment variable for this to work.
-	return [[[NSProcessInfo processInfo] environment][@"UNITTEST"] isEqualToString:@"1"];
+	return (NSClassFromString(@"XCTestCase") != nil || [[[NSProcessInfo processInfo] environment][@"UNITTEST"] isEqualToString:@"1"]);
 }
 
 #pragma mark - NSCopying
