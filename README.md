@@ -74,6 +74,30 @@ The keen observer (that's you!) might notice that is the Objective-C KVC literal
 
 `BREnvironment` will return the *first non-nil* value found in any registered provider, traversing the providers in the order they are registered. If no provider provides a value, then the usual search paths will be used, so the app can fall back to values included by the app itself.
 
+
+Unit test support
+-----------------
+
+`BREnvirnoment` provides a small utility method to help with your application's unit testing:
+
+```objc
++ (BOOL)isUnitTest;
+```
+
+This can be used by your application to avoid executing code during unit tests. A common technique is to short-circuit the normal application startup routines, like this:
+
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	if ( [BREnvironment isUnitTest] ) {
+		// don't bother initializing the application during unit testing
+		return YES;
+	}
+	
+	// normal application startup goes here...
+}
+```
+
+
 # Setup in 3 easy steps
 
 The first step is to integrate BREnvironment into your own project. You can integrate
